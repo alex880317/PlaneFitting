@@ -8,14 +8,16 @@ class Point3D
 	: public GRANSAC::AbstractParameter
 {
 public:
-	Point3D(GRANSAC::VPFloat x, GRANSAC::VPFloat y, GRANSAC::VPFloat z)
+	Point3D(GRANSAC::VPFloat x, GRANSAC::VPFloat y, GRANSAC::VPFloat z, int index = 0)
 	{
 		m_Point3D[0] = x;
 		m_Point3D[1] = y;
 		m_Point3D[2] = z;
+		m_Index = index;  // 新增的索引字段
 	};
 
 	Vector3VP m_Point3D;
+	int m_Index;  // 用于存储原始点云中的索引
 };
 
 class PlaneModel
