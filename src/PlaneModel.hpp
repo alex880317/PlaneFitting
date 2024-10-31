@@ -21,7 +21,7 @@ public:
 };
 
 class PlaneModel
-	: public GRANSAC::AbstractModel<3>
+	: public GRANSAC::AbstractModel<500>
 {
 protected:
 	// Parametric form
